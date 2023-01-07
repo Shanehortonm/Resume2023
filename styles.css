@@ -1,3 +1,17 @@
+:root {
+    --color1: #070707ff;
+    --color2: #2e1e2eff;
+    --color3: #553555ff;
+    --color4: #65485fff;
+    --color5: #7e8788ff;
+    --color6: #96c5b0ff;
+    --color7: #9fd6bdff;
+    --color8: #a8e6caff;
+    --color9: #b4f2d6ff;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +20,7 @@
 }
 
 .navbar{
-    background: #131313;
+    background: var(--color1);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -31,9 +45,9 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 2.5rem;
-    background-color: #000000;
-    background-image: linear-gradient(to top, #238be0 0%, #fff8f8 100%);
+    font-size: 3.5rem;
+    background: white;
+    background: linear-gradient(to right, var(--color4), var(--color4), var(--color5));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -43,5 +57,49 @@
 .navbar-menu {
     display: flex;
     align-items: center;
-    list-style: none;
+    list-style: none; 
+}
+
+.navbar-item {
+    height: 80px;
+}
+
+.navbar-links {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.navbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.contact-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: white;
+    background: -webkit-linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    background: linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar-links:hover {
+    color:    ;
 }
