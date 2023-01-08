@@ -310,12 +310,107 @@ Start of About
     background: linear-gradient(to right, var(--color2), var(--color3), var(--color4));
 }
 
+/*
+=====================================================================================
+Start of Portfolio
+=====================================================================================
+*/
+
+.portfolio {
+    background: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.portfolio h1 {
+    background-color: white;
+    background-image: linear-gradient(to right, var(--color4), var(--color4), var(--color5));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.portfolio-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.portfolio-card {
+    margin: 10px;
+    height: 425px;
+    width: 350px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-image: linear-gradient(to right, var(--color3) 0%, var(--color5) 50%, var(--color6) 100%);
+    transition: 0.5s ease-in;
+}
+
+.portfolio-card:nth-child(2) {
+    background-image: linear-gradient(to bottom, var(--color7) 0%, var(--color6) 50%, var(--color5) 100%);
+}
+
+.portfolio-card:nth-child(3) {
+    background-image: linear-gradient(to bottom, var(--color7) 0%, var(--color6) 50%, var(--color5) 100%);
+}
+.portfolio-card:nth-child(4) {
+    background-image: linear-gradient(to left, var(--color3) 0%, var(--color5) 50%, var(--color6) 100%);
+}
+
+.portfolio-card h2 {
+    text-align: center;
+}
+
+.portfolio-card p {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+}
+
+.portfolio-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.portfolio-card button {
+    color: white;
+    padding: 14px 24px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: var(--color1);
+    font-size: 1rem;
+}
+
+.portfolio-card button:hover {
+    cursor: pointer;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
 
 /*
-=================================================
+=====================================================================================
 Media Queries 
-=================================================
+=====================================================================================
 */
+
+
 
 @media screen and (max-width: 480px) {
     .about-img-card {
@@ -473,6 +568,15 @@ Media Queries
         font-size: 40px;
         transition: all 0.5s ease;
     }
+
+    /* Start of Portfolio */
+
+    .portfolio-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -518,10 +622,10 @@ Media Queries
     }
 }
 
-@media screen and (min-width: 960px) {
-    
-}
+@media screen and (max-width: 1300px) {
 
-@media screen and (min-width: 768px) {
-    
+    /* Start of Portfolio */
+    .portfolio-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
 }
