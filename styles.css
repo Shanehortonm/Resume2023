@@ -19,6 +19,13 @@
     scroll-behavior: smooth;
 }
 
+
+/*
+==========================================================
+Start of Nav
+==========================================================
+*/
+
 .navbar{
     background: var(--color1);
     height: 80px;
@@ -28,7 +35,7 @@
     font-size: 1.2rem;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .navbar-container {
@@ -46,8 +53,8 @@
     align-items: center;
     text-decoration: none;
     font-size: 3.5rem;
-    background: white;
-    background: linear-gradient(to right, var(--color4), var(--color4), var(--color5));
+    background-color: white;
+    background-image: linear-gradient(to right, var(--color4), var(--color4), var(--color5));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -72,6 +79,7 @@
     width: 125px;
     text-decoration: none;
     height: 100%;
+    
 }
 
 .navbar-btn {
@@ -80,6 +88,7 @@
     align-items: center;
     padding: 0 1rem;
     width: 100%;
+    transition: all 0.5s ease;  
 }
 
 .contact-btn {
@@ -97,9 +106,318 @@
     background: -webkit-linear-gradient(to right, var(--color2), var(--color3), var(--color4));
     background: linear-gradient(to right, var(--color2), var(--color3), var(--color4));
     color: white;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease;
 }
 
 .navbar-links:hover {
-    color:    ;
+    color: var(--color9);
+    transition: all 0.5s ease;  
+}
+
+/*
+==========================================================
+Start of Hero
+==========================================================
+*/
+
+.hero {
+    background: var(--color1);
+    background: linear-gradient(to right, #161616 5%, var(--color1) 45%);
+    padding: 200px 0;
+    transition: all 0.5s ease;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+    transition: all 0.5s ease;
+}
+
+.hero-container h1 {
+    color: var(--color6);
+}
+
+.hero-heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: var(--color5);
+    transition: all 0.5s ease;
+}
+
+.hero-heading span {
+    background: white;
+    background: -webkit-linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    background: linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    font-size: 60px;
+    background: -webkit-linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    background: linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.highlight {
+    border-bottom: 4px solid var(--color6);
+}
+
+
+/*
+==========================================================
+Start of About
+==========================================================
+*/
+
+.about {
+    background: linear-gradient(to right, var(--color2), var(--color1));
+    padding: 10rem 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.about-content {
+    color: whitesmoke;
+    width: 100%;
+}
+
+.about-content h1 {
+    font-size: 2rem;
+    background-color: white;
+    background-image: linear-gradient(to right, var(--color4), var(--color4), var(--color5));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.about-content h2 {
+    font-size: 4rem;
+    background: -webkit-linear-gradient(to right, var(--color4), var(--color5), var(--color6));
+    background: linear-gradient(to right, var(--color4), var(--color5), var(--color6));
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.about-content p {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.about-btn {
+    font-size: 1.5rem;
+    background: white;
+    background: -webkit-linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    background: linear-gradient(to right, var(--color2), var(--color3), var(--color4));
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s;
+    outline: none;
+}
+
+.about-btn a {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+
+.about-btn::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, var(--color5), var(--color6), var(--color7));
+    transition: all .5s;
+    border-radius: 4px;
+}
+
+.about-btn:hover {
+    color: white;
+}
+
+.about-btn:hover:after {
+    width: 100%;
+}
+
+/*
+=================================================
+Media Queries 
+=================================================
+*/
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    /* Start of Nav*/
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar-menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbar-menu.active {
+        background-color: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 2rem;
+    }
+
+    #logo {
+        padding-left: 25px;
+    }
+
+    .navbar-toggle {
+        padding-right: 25px;
+        padding-top: 25px;
+    }
+
+    .navbar-toggle .bar {
+        width: 35px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.5s ease-in-out;
+        background: whitesmoke;
+    }
+
+    .navbar-toggle .bar:nth-child(1) {
+        background: var(--color2);
+    }
+
+    .navbar-toggle .bar:nth-child(2) {
+        background: var(--color3);
+    }
+
+    .navbar-toggle .bar:nth-child(3) {
+        background: var(--color4);
+    }
+
+    .navbar-item {
+        width: 100%;
+    }
+
+    .navbar-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .navbar-btn {
+        padding-bottom: 2rem;
+    }
+
+    .contact-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Start of Hero */
+    .hero-heading {
+        font-size: 60px;
+        transition: all 0.5s ease;
+    }
+
+    .hero-description {
+        font-size: 40px;
+        transition: all 0.5s ease;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+@media screen and (min-width: 960px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    
 }
