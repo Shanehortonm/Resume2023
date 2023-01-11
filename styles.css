@@ -346,7 +346,7 @@ Start of Portfolio
 .portfolio-card {
     margin: 10px;
     height: 425px;
-    width: 350px;
+    width: 300px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -403,6 +403,13 @@ Start of Portfolio
     cursor: pointer;
 }
 
+/*
+=====================================================================================
+Start of Email
+=====================================================================================
+*/
+
+
 
 /*
 =====================================================================================
@@ -413,6 +420,8 @@ Media Queries
 
 
 @media screen and (max-width: 480px) {
+
+    /* Start of About */
     .about-img-card {
         width: 250px;
         height: 250px;
@@ -441,6 +450,8 @@ Media Queries
         padding: 12px 36px;
         margin: 2.5rem 0;
     }
+
+    /* Start of Email */
 }
 
 
@@ -478,7 +489,7 @@ Media Queries
         transition: all 0.5s ease;
         z-index: 99;
         height: 60vh;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     #logo {
@@ -571,10 +582,20 @@ Media Queries
 
     /* Start of Portfolio */
 
+    .portfolio {
+        width: 100%;
+    }
+
     .portfolio-wrapper {
         display: flex;
         flex-direction: column;
     }
+
+    .portfolio-card {
+        height: 400px;
+        width: 325px;
+    }
+    
 
 
 }
@@ -598,8 +619,8 @@ Media Queries
     }
 
     .about-img-card {
-        height: 425px;
-        width: 425px;
+        height: 300px;
+        width: 300px;
     }
 
     .about-content {
