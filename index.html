@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -208,42 +210,35 @@
 						<i class="fa-solid fa-envelope" onclick="openForm()"></i>
 					</div>
 					<div class="form-popup" id="myForm">
-						<form>
-							<h3>Contact Me</h3>
-							<input
-								type="name"
-								id="name"
-								name="name"
-								placeholder="Your Name"
-								required
-							/>
-							<input
-								type="text"
-								id="email"
-								name="email"
-								placeholder="Email"
-								required
-							/>
-							<input
-								type="text"
-								id="number"
-								name="number"
-								placeholder="Phone #"
-								required
-							/>
-							<textarea
-								id="message"
-								name="message"
-								rows="4"
-								placeholder="How can we help you?"
-							></textarea>
-							<input type="submit" value="Send Email"  id="sendBtn" />
-							<button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+						<form id="form">
+							<div class="field">
+								<label for="name">name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field">
+								<label for="email">email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="number">number</label>
+								<input type="text" name="number" id="number" />
+							</div>
+							<div class="field">
+								<label for="message">message</label>
+								<input type="text" name="message" id="message" />
+							</div>
+							<div class="field">
+								<label for="reply_to">reply_to</label>
+								<input type="text" name="reply_to" id="reply_to" />
+							</div>
+
+							<input type="submit" id="emailBtn" value="Send Email" />
+							<button type="button" class="btn-cancel" onclick="closeForm()">
+								Close
+							</button>
 						</form>
 					</div>
 				</div>
-			</div>
-
 			</div>
 		</section>
 
@@ -290,11 +285,13 @@
 		</section>
 
 		<script src="/app.js"></script>
-		<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
 
-<script type="text/javascript">
-  emailjs.init('OP9s9s4CNaoyWMibg')
-</script>
+		<script type="text/javascript">
+			emailjs.init("OP9s9s4CNaoyWMibg");
+		</script>
 	</body>
 </html>

@@ -52,23 +52,23 @@ Email link to Email.js
 ==================================================
 */
 
-let sendBtn = document.getElementById('sendBtn');
-const form = document.getElementById('form');
+const btn = document.getElementById('emailBtn');
 
-sendBtn.addEventListener('click', function(e) {
-	e.preventDefault();
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
 
-	sendBtn.value = 'Sending...';
+   btn.value = 'Sending...';
 
-	const serviceID = 'default_service';
-  const templateID = 'template_94od5g2';
+   const serviceID = 'default_service';
+   const templateID = 'template_wzdhgd4';
 
-  emailjs.sendForm(serviceID, templateID, form)
+   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      sendBtn.value = 'Send Email';
+      btn.value = 'Send Email';
       alert('Sent!');
     }, (err) => {
-      sendBtn.value = 'Send Email';
+      btn.value = 'Send Email';
       alert(JSON.stringify(err));
     });
-})
+});
