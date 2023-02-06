@@ -132,11 +132,12 @@ Start of Hero
 */
 
 .hero {
-	background: var(--color1);
-	background: linear-gradient(to right, #161616 5%, var(--color1) 45%);
-	padding: 200px 0;
-	transition: all 0.5s ease;
+    padding: 200px 0;
+    transition: all 0.5s ease;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 7px, black 17px ), 
+                       repeating-linear-gradient( var(--color3), black, black, black, var(--color3));              
 }
+
 
 .hero-container {
 	display: flex;
@@ -147,7 +148,7 @@ Start of Hero
 	margin: 0 auto;
 	height: 90%;
 	text-align: center;
-	padding: 30px;
+	padding: 20px 50px;
 	transition: all 0.5s ease;
 }
 
@@ -233,6 +234,7 @@ Start of About
 .about {
 	background: linear-gradient(to right, var(--color2), var(--color1));
 	padding: 10rem 0;
+    box-shadow: -1px 1px 46px 19px rgba(0,0,0,0.55);
 }
 
 .about-container {
@@ -438,8 +440,9 @@ Start of Portfolio
 
 .portfolio-wrapper {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
+    gap: 10px;
 }
 
 .portfolio-card {
