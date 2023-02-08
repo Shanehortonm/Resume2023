@@ -1,3 +1,5 @@
+/** @format */
+
 :root {
 	--color1: #070707ff;
 	--color2: #2e1e2eff;
@@ -132,12 +134,15 @@ Start of Hero
 */
 
 .hero {
-    padding: 200px 0;
-    transition: all 0.5s ease;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 7px, black 17px ), 
-                       repeating-linear-gradient( var(--color3), black, black, black, var(--color3));              
+	padding: 200px 0;
+	transition: all 0.5s ease;
+	background-image: repeating-radial-gradient(
+			circle at 0 0,
+			transparent 7px,
+			black 17px
+		),
+		repeating-linear-gradient(var(--color3), black, black, black, var(--color3));
 }
-
 
 .hero-container {
 	display: flex;
@@ -154,10 +159,11 @@ Start of Hero
 
 .hero-container h1 {
 	color: var(--color6);
+	max-width: 1000px;
 }
 
 .hero-container h3 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	background-color: white;
 	background-image: linear-gradient(
 		to right,
@@ -171,6 +177,7 @@ Start of Hero
 	-webkit-text-fill-color: transparent;
 	text-transform: uppercase;
 	margin: 5rem 0;
+	max-width: 850px;
 }
 
 .hero-heading {
@@ -201,7 +208,7 @@ Start of Hero
 }
 
 .hero-description {
-	font-size: 60px;
+	font-size: 40px;
 	background: -webkit-linear-gradient(
 		to right,
 		var(--color2),
@@ -232,9 +239,15 @@ Start of About
 */
 
 .about {
-	background: linear-gradient(to right, var(--color2), var(--color1));
-	padding: 10rem 0;
-    box-shadow: -1px 1px 46px 19px rgba(0,0,0,0.55);
+	background: linear-gradient(
+		to bottom,
+		var(--color1),
+		var(--color2),
+		var(--color2),
+		var(--color1)
+	);
+	padding: 5rem 0;
+	box-shadow: -1px 1px 46px 19px rgba(0, 0, 0, 0.55);
 }
 
 .about-container {
@@ -243,7 +256,7 @@ Start of About
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	height: 90%;
+	height: 100%;
 	z-index: 1;
 	width: 100%;
 	max-width: 1300px;
@@ -296,7 +309,7 @@ Start of About
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	transition: all 0.5s ease;
-	margin-bottom: 2rem;
+	margin: 2rem 0;
 }
 
 .about-content p {
@@ -413,13 +426,19 @@ Start of Portfolio
 */
 
 .portfolio {
-	background: var(--color1);
+	background: linear-gradient(
+		to bottom,
+		var(--color1),
+		var(--color2),
+		var(--color2),
+		var(--color1)
+	);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	padding: 10rem 0 20rem 0;
+	padding: 5rem 0;
 }
 
 .portfolio h1 {
@@ -442,7 +461,7 @@ Start of Portfolio
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
-    gap: 10px;
+	gap: 10px;
 }
 
 .portfolio-card {
@@ -532,12 +551,15 @@ Start of Experience
 */
 
 .resume-container {
-	background: linear-gradient(to right, var(--color2), var(--color1));
+	background: linear-gradient(
+		to bottom,
+		var(--color1),
+		var(--color2),
+		var(--color2),
+		var(--color1)
+	);
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: 100%;
-	padding: 10rem 0 10rem 0;
 	justify-content: center;
 	align-items: center;
 	color: whitesmoke;
@@ -560,12 +582,14 @@ Start of Experience
 }
 
 .resume-grid {
+	border: 1px solid black;
 	background: linear-gradient(to right, var(--color2), var(--color1));
-	width: 95%;
+	width: 85%;
 	border-radius: 30px;
 	box-shadow: -36px 46px 6px 3px rgba(1, 5, 19, 0.4);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	margin-bottom: 10rem;
 }
 
 .resume-grid > div {
@@ -735,6 +759,11 @@ Media Queries
 
 @media screen and (max-width: 480px) {
 	/* Start of About */
+	.hero-container h3 {
+		font-size: 1.3rem;
+	}
+
+	/* Start of About */
 	.about-img-card {
 		width: 250px;
 		height: 250px;
@@ -790,6 +819,12 @@ Media Queries
 }
 
 @media screen and (max-width: 768px) {
+	/* Start of About */
+	.hero-container h3 {
+		font-size: 1.5rem;
+		transition: all 0.5s ease;
+	}
+
 	/* Start of Nav*/
 	.navbar-container {
 		display: flex;
