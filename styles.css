@@ -141,7 +141,14 @@ Start of Hero
 			transparent 7px,
 			black 17px
 		),
-		repeating-linear-gradient(var(--color3), black, black, black, var(--color3));
+		repeating-linear-gradient(
+			var(--color3),
+			black,
+			black,
+			black,
+			var(--color3),
+			var(--color1)
+		);
 }
 
 .hero-container {
@@ -390,12 +397,12 @@ Start of About
 	flex-direction: column;
 	justify-content: center;
 	color: var(--color7);
-	background-image: linear-gradient(
-		to right,
-		var(--color4),
-		var(--color4),
-		var(--color5)
-	);
+
+	/* Created with https://www.css-gradient.com */
+	background: #2e1e2e;
+	background: -webkit-radial-gradient(center, #2e1e2e, #010101);
+	background: -moz-radial-gradient(center, #2e1e2e, #010101);
+	background: radial-gradient(ellipse at center, #2e1e2e, #010101);
 }
 
 .fa-solid,
@@ -404,19 +411,11 @@ Start of About
 }
 
 #card-2 {
-	background: white;
-	background: -webkit-linear-gradient(
-		to right,
-		var(--color2),
-		var(--color3),
-		var(--color4)
-	);
-	background: linear-gradient(
-		to right,
-		var(--color2),
-		var(--color3),
-		var(--color4)
-	);
+	/* Created with https://www.css-gradient.com */
+	background: #2e1e2e;
+	background: -webkit-radial-gradient(center, #2e1e2e, #010101);
+	background: -moz-radial-gradient(center, #2e1e2e, #010101);
+	background: radial-gradient(ellipse at center, #2e1e2e, #010101);
 }
 
 /*
@@ -758,6 +757,12 @@ Media Queries
 */
 
 @media screen and (max-width: 480px) {
+	/* Start of Nav */
+
+	#logo {
+		font-size: 2.5rem;
+	}
+
 	/* Start of About */
 	.hero-container h3 {
 		font-size: 1.3rem;
