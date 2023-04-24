@@ -253,8 +253,7 @@ Start of About
 		var(--color2),
 		var(--color1)
 	);
-	padding: 5rem 0;
-	box-shadow: -1px 1px 46px 19px rgba(0, 0, 0, 0.55);
+	padding: 4rem 0;
 }
 
 .about-container {
@@ -278,23 +277,6 @@ Start of About
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-}
-
-.about-content h1 {
-	font-size: 3rem;
-	background-color: white;
-	background-image: linear-gradient(
-		to right,
-		var(--color4),
-		var(--color4),
-		var(--color5)
-	);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-transform: uppercase;
-	margin-bottom: 4rem;
 }
 
 .about-content h2 {
@@ -437,7 +419,7 @@ Start of Portfolio
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	padding: 5rem 0;
+	padding-bottom: 4rem;
 }
 
 .portfolio h1 {
@@ -461,14 +443,12 @@ Start of Portfolio
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr;
 	gap: 10px;
-    transition: all 0.8s ease-in;
 }
 
 .portfolio-card {
-    padding: 20px;
 	margin: 10px;
 	height: 425px;
-	width: 400px;
+	width: 300px;
 	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
@@ -498,14 +478,6 @@ Start of Portfolio
 		var(--color7) 0%,
 		var(--color6) 50%,
 		var(--color5) 100%
-	);
-}
-.portfolio-card:nth-child(4) {
-	background-image: linear-gradient(
-		to left,
-		var(--color3) 0%,
-		var(--color5) 50%,
-		var(--color6) 100%
 	);
 }
 
@@ -564,6 +536,7 @@ Start of Experience
 	justify-content: center;
 	align-items: center;
 	color: whitesmoke;
+	padding: 4rem 0;
 }
 
 .resume-container h1 {
@@ -664,47 +637,6 @@ Start of Email
 	cursor: pointer;
 }
 
-.form-popup {
-	background: var(--color3);
-	display: none;
-	position: fixed;
-	bottom: 20px;
-	border: 3px solid #f1f1f1;
-	border-radius: 5%;
-	z-index: 9;
-	width: 70%;
-	max-width: 700px;
-}
-
-form {
-	background: var(--website6);
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	transition: all 0.2s ease;
-}
-
-form h3 {
-	color: white;
-	font-weight: 800;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.7rem;
-	text-decoration: underline;
-}
-
-form input,
-form textarea,
-.btn-cancel {
-	border: 0;
-	border-radius: 10px;
-	margin: 10px 20px;
-	padding: 5px 15px;
-	outline: none;
-	background: white;
-	font-size: 1.1rem;
-}
 /*
 =====================================================================================
 Start of Footer
@@ -763,11 +695,6 @@ Media Queries
 
 	#logo {
 		font-size: 2.5rem;
-	}
-
-	/* Start of About */
-	.hero-container h3 {
-		font-size: 1.3rem;
 	}
 
 	/* Start of About */
@@ -962,7 +889,6 @@ Media Queries
 	.portfolio-wrapper {
 		display: flex;
 		flex-direction: column;
-        transition: all 0.8s ease-in;
 	}
 
 	.portfolio-card {
@@ -1042,29 +968,7 @@ Media Queries
 	}
 
 	/* Start of Portfolio */
-
-    .portfolio-card {
-        width: 350px;
-    }
-
 	.portfolio-wrapper {
-		grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        transition: all 0.8s ease-in;
+		grid-template-columns: 1fr 1fr;
 	}
-
-    .card-1 {
-        grid-area: 1 / 1 / 3 / 3;
-    }
-
-    .card-2 {
-        grid-area: 1 / 3 / 3 / 5;
-    }
-
-    .card-3 {
-        grid-area: 3 / 2 / 5 / 4;
-    }
-
 }
