@@ -38,12 +38,15 @@ Email PopUp
 ==================================================
 */
 
+
 function openForm() {
   document.getElementById("myForm").style.display = "flex";
+  document.getElementById("card-2").style.display = "none"
 }
   
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+  document.getElementById("card-2").style.display = "contents"
 }
 
 /*

@@ -63,6 +63,7 @@ Start of Nav
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	transition: all 0.5s ease-in-out;
 }
 
 .navbar-menu {
@@ -379,25 +380,15 @@ Start of About
 	flex-direction: column;
 	justify-content: center;
 	color: var(--color7);
-
-	/* Created with https://www.css-gradient.com */
-	background: #2e1e2e;
 	background: -webkit-radial-gradient(center, #2e1e2e, #010101);
 	background: -moz-radial-gradient(center, #2e1e2e, #010101);
 	background: radial-gradient(ellipse at center, #2e1e2e, #010101);
+	box-shadow: -2px 4px 53px 19px rgba(0, 0, 0, 0.75);
 }
 
 .fa-solid,
 .fa-cubes-stacked {
 	font-size: 16rem;
-}
-
-#card-2 {
-	/* Created with https://www.css-gradient.com */
-	background: #2e1e2e;
-	background: -webkit-radial-gradient(center, #2e1e2e, #010101);
-	background: -moz-radial-gradient(center, #2e1e2e, #010101);
-	background: radial-gradient(ellipse at center, #2e1e2e, #010101);
 }
 
 /*
@@ -637,6 +628,22 @@ Start of Email
 	cursor: pointer;
 }
 
+.form-popup {
+	display: none;
+}
+
+#form {
+	min-width: 300px;
+	padding: 20px;
+	border: 1px solid white;
+	border-radius: 10px;
+}
+
+.field {
+	padding: 10px 0 10px 0;
+	width: 300px;
+}
+
 /*
 =====================================================================================
 Start of Footer
@@ -694,7 +701,8 @@ Media Queries
 	/* Start of Nav */
 
 	#logo {
-		font-size: 2.5rem;
+		font-size: 3rem;
+		transition: all 0.5s ease-in-out;
 	}
 
 	/* Start of Hero */
@@ -797,6 +805,7 @@ Media Queries
 
 	#logo {
 		padding-left: 25px;
+		transition: all 0.5s ease-in-out;
 	}
 
 	.navbar-toggle {
