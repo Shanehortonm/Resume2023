@@ -539,12 +539,13 @@ Start of Experience
 .resume-grid {
 	border: 1px solid black;
 	background: linear-gradient(to right, var(--color2), var(--color1));
-	width: 85%;
+	width: 100%;
 	border-radius: 30px;
 	box-shadow: -36px 46px 6px 3px rgba(1, 5, 19, 0.4);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	margin-bottom: 10rem;
+	padding: 20px;
 }
 
 .resume-grid > div {
