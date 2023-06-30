@@ -257,7 +257,7 @@ Start of About
 		var(--color2),
 		var(--color1)
 	);
-	padding: 4rem 0;
+	padding: 4rem 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
