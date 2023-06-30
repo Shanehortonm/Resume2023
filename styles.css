@@ -95,6 +95,11 @@ Start of Nav
 	transition: all 0.5s ease;
 }
 
+.navbar-links:hover {
+	color: var(--color9);
+	transition: all 0.5s ease;
+}
+
 .contact-btn {
 	display: flex;
 	justify-content: center;
@@ -103,8 +108,6 @@ Start of Nav
 	padding: 10px 20px;
 	height: 100%;
 	width: 100%;
-	border: none;
-	outline: none;
 	border-radius: 4px;
 	background: white;
 	background: -webkit-linear-gradient(
@@ -120,12 +123,12 @@ Start of Nav
 		var(--color4)
 	);
 	color: white;
-	transition: all 0.5s ease;
+	transition: color 0.9s ease-in-out, box-shadow 0.9s ease-in-out;
 }
 
-.navbar-links:hover {
-	color: var(--color9);
-	transition: all 0.5s ease;
+.contact-btn:hover {
+	color: var(--color3);
+	box-shadow: inset 10px 5px 40px 40px var(--color6);
 }
 
 /*
@@ -255,9 +258,28 @@ Start of About
 		var(--color1)
 	);
 	padding: 4rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 }
 
-.about-container {
+.about-container h1 {
+	background-color: white;
+	background-image: linear-gradient(
+		to right,
+		var(--color4),
+		var(--color4),
+		var(--color5)
+	);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 5rem;
+	font-size: 3.5rem;
+	text-align: center;
 }
 
 .about-content {
@@ -345,12 +367,8 @@ Start of About
 		var(--color6),
 		var(--color7)
 	);
-	transition: all 0.5s;
+	transition: all 0.7s ease-in-out;
 	border-radius: 4px;
-}
-
-.about-btn:hover {
-	color: white;
 }
 
 .about-btn:hover:after {
@@ -363,8 +381,9 @@ Start of About
 
 .about-img-card {
 	margin: 10px;
-	height: 600px;
-	width: 500px;
+	height: 500px;
+	width: 400px;
+	transition: all 0.5s ease-in-out;
 	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
@@ -420,10 +439,8 @@ Start of Portfolio
 }
 
 .portfolio-wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr;
-	gap: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .portfolio-card {
@@ -539,21 +556,20 @@ Start of Experience
 .resume-grid {
 	border: 1px solid black;
 	background: linear-gradient(to right, var(--color2), var(--color1));
-	width: 100%;
 	border-radius: 30px;
 	box-shadow: -36px 46px 6px 3px rgba(1, 5, 19, 0.4);
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	margin-bottom: 10rem;
-	padding: 20px;
+	grid-template-columns: 1fr;
+	padding: 2rem;
+	margin: 2rem;
 }
 
 .resume-grid > div {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: top;
 	align-items: center;
-	padding: 2rem;
+	padding: 1.5rem;
 	font-size: 1.3rem;
 	text-align: center;
 }
@@ -682,77 +698,12 @@ Start of Footer
 .website-rights {
 	color: white;
 }
+
 /*
 =====================================================================================
 Media Queries 
 =====================================================================================
 */
-
-@media screen and (max-width: 480px) {
-	/* Start of Nav */
-
-	#logo {
-		font-size: 3rem;
-		transition: all 0.5s ease-in-out;
-	}
-
-	/* Start of Hero */
-
-	/* Start of About */
-
-	.about-img-card {
-		width: 250px;
-		height: 250px;
-		transition: all 0.3s ease;
-	}
-
-	.fa-users,
-	.fa-layer-group {
-		font-size: 4rem;
-	}
-
-	.about-content h1 {
-		font-size: 2rem;
-		margin-top: 2rem;
-	}
-
-	.about-content h2 {
-		font-size: 1.1rem;
-	}
-
-	.about-content p {
-		margin-top: 2rem;
-		font-size: 1.5rem;
-	}
-
-	.about-btn {
-		padding: 12px 36px;
-		margin: 2.5rem 0;
-	}
-
-	/* Start of Resume */
-
-	.resume-grid > div > h2 {
-		font-size: 2.6rem;
-		transition: 0.5s ease;
-	}
-
-	.resume-grid > div > p,
-	li {
-		font-size: 1.2rem;
-		transition: 0.5s ease;
-	}
-
-	/* Start of Email */
-
-	/* Start of Footer */
-
-	.footer-link-items {
-		margin: 0;
-		padding: 10px;
-		width: 100%;
-	}
-}
 
 @media screen and (max-width: 768px) {
 	/* Start of About */
@@ -917,54 +868,18 @@ Media Queries
 	}
 }
 
-@media screen and (max-width: 1100px) {
-	/* Start of About*/
-	.about-container {
-		display: grid;
-		grid-template-columns: 1fr;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		margin: 0 auto;
-		height: 90%;
-	}
-
-	.about-img-container {
-		display: flex;
-		justify-content: center;
-	}
-
-	.about-img-card {
-		height: 300px;
-		width: 300px;
-	}
+@media screen and (min-width: 768px) {
+	/* Start of About */
 
 	.about-content {
-		text-align: center;
-		margin-bottom: 4rem;
+		flex-direction: row;
+		margin: 5rem 2rem;
 	}
 
-	.about-content h1 {
-		font-size: 2.5rem;
-		margin-top: 2rem;
+	.about-me {
+		padding: 2rem;
 	}
 
-	.about-content h2 {
-		font-size: 3rem;
-	}
-
-	.about-content p {
-		margin-top: 1rem;
-		font-size: 1.5rem;
-	}
-
-	.portfolio-wrapper {
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-@media screen and (min-width: 1100px) and (max-width: 1300px) {
 	/* Start of Portfolio */
 	.portfolio-wrapper {
 		display: grid;
@@ -983,19 +898,15 @@ Media Queries
 	.card-3 {
 		grid-area: 3 / 2 / 5 / 4;
 	}
-}
 
-@media screen and (min-width: 1100px) {
-}
-
-@media screen and (max-width: 1300px) {
+	/* Start of Resume */
 	.resume-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-
-	/* Start of Portfolio */
-	.portfolio-wrapper {
 		grid-template-columns: 1fr 1fr;
 	}
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1300px) {
 }
