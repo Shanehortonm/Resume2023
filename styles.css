@@ -257,12 +257,12 @@ Start of About
 		var(--color2),
 		var(--color1)
 	);
-	padding: 4rem 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	padding: 5rem 0;
 }
 
 .about-container h1 {
@@ -285,7 +285,7 @@ Start of About
 .about-content {
 	color: whitesmoke;
 	width: 100%;
-	padding: 5px 20px 5px 20px;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -381,8 +381,8 @@ Start of About
 
 .about-img-card {
 	margin: 10px;
-	height: 500px;
-	width: 400px;
+	height: 325px;
+	width: 275px;
 	transition: all 0.5s ease-in-out;
 	border-radius: 4px;
 	display: flex;
@@ -397,7 +397,7 @@ Start of About
 
 .fa-solid,
 .fa-cubes-stacked {
-	font-size: 16rem;
+	font-size: 10rem;
 }
 
 /*
@@ -419,7 +419,7 @@ Start of Portfolio
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	padding-bottom: 4rem;
+	padding: 5rem 0;
 }
 
 .portfolio h1 {
@@ -534,7 +534,7 @@ Start of Experience
 	justify-content: center;
 	align-items: center;
 	color: whitesmoke;
-	padding: 4rem 0;
+	padding: 5rem 0;
 }
 
 .resume-container h1 {
@@ -560,8 +560,6 @@ Start of Experience
 	box-shadow: -36px 46px 6px 3px rgba(1, 5, 19, 0.4);
 	display: grid;
 	grid-template-columns: 1fr;
-	padding: 2rem;
-	margin: 2rem;
 }
 
 .resume-grid > div {
