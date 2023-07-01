@@ -31,7 +31,7 @@ Start of Nav
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.2rem;
+	font-size: .8rem;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -51,7 +51,7 @@ Start of Nav
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	font-size: 3.5rem;
+	font-size: 2.5rem;
 	background-color: white;
 	background-image: linear-gradient(
 		to right,
@@ -174,7 +174,7 @@ Start of Hero
 }
 
 .hero-container h3 {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	background-color: white;
 	background-image: linear-gradient(
 		to right,
@@ -192,7 +192,7 @@ Start of Hero
 }
 
 .hero-heading {
-	font-size: 100px;
+	font-size: 4rem;
 	margin-bottom: 24px;
 	color: var(--color5);
 	transition: all 0.5s ease;
@@ -740,7 +740,7 @@ Media Queries
 		transition: all 0.5s ease;
 		z-index: 99;
 		height: 60vh;
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 
 	#logo {
@@ -755,7 +755,7 @@ Media Queries
 
 	.navbar-toggle .bar {
 		width: 35px;
-		height: 3px;
+		height: 2px;
 		margin: 5px auto;
 		transition: all 0.5s ease-in-out;
 		background: whitesmoke;
