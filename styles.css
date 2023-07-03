@@ -31,7 +31,7 @@ Start of Nav
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: .8rem;
+	font-size: 0.8rem;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -160,15 +160,14 @@ Start of Hero
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 50px 0;
+	padding: 80px 0;
 	transition: all 0.5s ease;
 }
 
-
 .hero-box {
 	display: grid;
-	grid-template-columns: 300px;
-	grid-template-rows: 180px 180px;
+	grid-template-columns: 350px;
+	grid-template-rows: 220px 220px;
 	grid-template-areas: "image" "content";
 	border-radius: 18px;
 	background-color: var(--color1);
@@ -180,25 +179,25 @@ Start of Hero
 }
 
 .hero-img img {
-	margin-top: 30px;
 	width: 180px;
 	border-radius: 40px;
-	box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.75);
+	transition: all 0.5s ease-in-out;
 }
 
 .hero-img {
+	margin: 40px 10px;
 	grid-area: image;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	background-size: cover;
+	transition: all 0.5s ease-in-out;
 }
 
 .hero-box .hero-img:hover {
-	width: 330px;
-	height: 400px;
-	transform: translateZ(30px);
+	transform: translateZ(100px) scale(1.1);
+	transition: all 0.5s ease-in-out;
 }
-
 
 .hero-content {
 	grid-area: content;
@@ -207,11 +206,14 @@ Start of Hero
 
 .hero-heading {
 	color: var(--color4);
+	transition: all 0.5s ease-in-out;
+	font-size: 2rem;
 }
 
 .hero-content p {
 	margin-top: 30px;
 	color: var(--color8);
+	font-size: 1.5rem;
 }
 
 .hero-box:hover {
@@ -268,7 +270,6 @@ Start of About
 	align-items: center;
 	text-align: center;
 }
-
 
 .about-content p {
 	padding: 2rem 3rem 2rem 3rem;
@@ -629,7 +630,6 @@ Start of Email
 	text-align: center;
 }
 
-
 .email-content p {
 	padding: 2rem 3rem 2rem 3rem;
 	font-size: 1.5rem;
@@ -642,9 +642,7 @@ Start of Email
 }
 
 .email-img-card {
-	
 	color: var(--color7);
-	
 }
 
 .fa-envelope:hover {
@@ -723,7 +721,6 @@ Media Queries
 
 @media screen and (max-width: 768px) {
 	/* Start of About */
-	
 
 	/* Start of Nav*/
 	.navbar-container {
@@ -837,7 +834,6 @@ Media Queries
 	}
 
 	/* Start of Hero */
-	
 
 	/* Start of Portfolio */
 
@@ -874,6 +870,19 @@ Media Queries
 }
 
 @media screen and (min-width: 768px) {
+	.hero-box {
+		grid-template-columns: 450px;
+		grid-template-rows: 230px 230px;
+	}
+
+	.hero-img img {
+		width: 230px;
+	}
+
+	.hero-heading {
+		margin-top: 30px;
+		transition: all 0.5s ease-in-out;
+	}
 	/* Start of About */
 
 	.about-content {
@@ -911,6 +920,15 @@ Media Queries
 }
 
 @media screen and (min-width: 1024px) {
+	.hero-box {
+		grid-template-columns: 500px;
+		grid-template-rows: 280px 280px;
+	}
+
+	.hero-img img {
+		width: 250px;
+	}
+
 	.portfolio-wrapper {
 		display: flex;
 		flex-direction: row;
@@ -918,4 +936,12 @@ Media Queries
 }
 
 @media screen and (min-width: 1300px) {
+	.hero-box {
+		grid-template-columns: 550px;
+		grid-template-rows: 310px 310px;
+	}
+
+	.hero-img img {
+		width: 300px;
+	}
 }
