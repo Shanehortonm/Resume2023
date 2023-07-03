@@ -138,7 +138,7 @@ Start of Hero
 */
 
 .hero {
-	padding: 200px 0;
+	color: white;
 	transition: all 0.5s ease;
 	background-image: repeating-radial-gradient(
 			circle at 0 0,
@@ -153,94 +153,63 @@ Start of Hero
 			var(--color3),
 			var(--color1)
 		);
+	min-height: 90vh;
 }
 
 .hero-container {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	height: 90%;
-	text-align: center;
-	padding: 20px 50px;
+	padding: 50px 0;
 	transition: all 0.5s ease;
 }
 
-.hero-container h1 {
-	color: var(--color6);
-	max-width: 1000px;
+
+.hero-box {
+	display: grid;
+	grid-template-columns: 300px;
+	grid-template-rows: 180px 180px;
+	grid-template-areas: "image" "content";
+	border-radius: 18px;
+	background-color: var(--color1);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+	text-align: center;
+	transition: all 0.5s ease;
 }
 
-.hero-container h3 {
-	font-size: 1.5rem;
-	background-color: white;
-	background-image: linear-gradient(
-		to right,
-		var(--color3) 33%,
-		var(--color5) 66%,
-		var(--color7)
-	);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-transform: uppercase;
-	margin: 5rem 0;
-	max-width: 850px;
+.hero-img img {
+	margin-top: 30px;
+	width: 150px;
+	border-radius: 40px;
+	perspective: 1000px;
+}
+
+.hero-img {
+	grid-area: image;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-size: cover;
+	transition: all 0.5s ease-in-out;
+}
+
+
+.hero-content {
+	grid-area: content;
+	margin: 25px;
 }
 
 .hero-heading {
-	font-size: 4rem;
-	margin-bottom: 24px;
-	color: var(--color5);
-	transition: all 0.5s ease;
+	color: var(--color4);
 }
 
-.hero-heading span {
-	background: white;
-	background: -webkit-linear-gradient(
-		to right,
-		var(--color2),
-		var(--color3),
-		var(--color4)
-	);
-	background: linear-gradient(
-		to right,
-		var(--color2),
-		var(--color3),
-		var(--color4)
-	);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
+.hero-content p {
+	margin-top: 30px;
+	color: var(--color8);
 }
 
-.hero-description {
-	font-size: 40px;
-	background: -webkit-linear-gradient(
-		to right,
-		var(--color2),
-		var(--color3),
-		var(--color4)
-	);
-	background: linear-gradient(
-		to right,
-		var(--color2),
-		var(--color3),
-		var(--color4)
-	);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: all 0.5s ease;
-}
-
-.highlight {
-	border-bottom: 4px solid white;
+.hero-box:hover {
+	transform: scale(1.2);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);
 }
 
 /*
@@ -403,7 +372,6 @@ Start of Portfolio
 }
 
 .portfolio h1 {
-	background-color: white;
 	background-image: linear-gradient(
 		to right,
 		var(--color4),
@@ -425,7 +393,7 @@ Start of Portfolio
 
 .portfolio-card {
 	margin: 10px;
-	height: 425px;
+	height: 375px;
 	width: 300px;
 	border-radius: 4px;
 	display: flex;
@@ -461,6 +429,7 @@ Start of Portfolio
 
 .portfolio-card h2 {
 	text-align: center;
+	color: var(--color3);
 }
 
 .portfolio-card p {
@@ -574,7 +543,7 @@ Start of Experience
 
 .resume-grid > div > p,
 l {
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 	text-align: center;
 	transition: 0.5s ease;
 }
@@ -609,6 +578,67 @@ l {
 Start of Email
 =====================================================================================
 */
+.email {
+	background: linear-gradient(
+		to bottom,
+		var(--color1),
+		var(--color2),
+		var(--color2),
+		var(--color1)
+	);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 5rem 0;
+}
+
+.email-container h1 {
+	background-color: white;
+	background-image: linear-gradient(
+		to right,
+		var(--color4),
+		var(--color4),
+		var(--color5)
+	);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 5rem;
+	font-size: 3.5rem;
+	text-align: center;
+}
+
+.email-content {
+	color: whitesmoke;
+	width: 100%;
+	max-width: 1200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+
+.email-content p {
+	padding: 2rem 3rem 2rem 3rem;
+	font-size: 1.5rem;
+	text-align: center;
+	max-width: 800px;
+}
+
+.email-img-container {
+	text-align: center;
+}
+
+.email-img-card {
+	
+	color: var(--color7);
+	
+}
 
 .fa-envelope:hover {
 	cursor: pointer;
@@ -686,10 +716,7 @@ Media Queries
 
 @media screen and (max-width: 768px) {
 	/* Start of About */
-	.hero-container h3 {
-		font-size: 1.5rem;
-		transition: all 0.5s ease;
-	}
+	
 
 	/* Start of Nav*/
 	.navbar-container {
@@ -803,15 +830,7 @@ Media Queries
 	}
 
 	/* Start of Hero */
-	.hero-heading {
-		font-size: 60px;
-		transition: all 0.5s ease;
-	}
-
-	.hero-description {
-		font-size: 40px;
-		transition: all 0.5s ease;
-	}
+	
 
 	/* Start of Portfolio */
 
@@ -885,6 +904,10 @@ Media Queries
 }
 
 @media screen and (min-width: 1024px) {
+	.portfolio-wrapper {
+		display: flex;
+		flex-direction: row;
+	}
 }
 
 @media screen and (min-width: 1300px) {
