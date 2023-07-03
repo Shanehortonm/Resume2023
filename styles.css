@@ -285,7 +285,7 @@ Start of About
 .about-content {
 	color: whitesmoke;
 	width: 100%;
-
+	max-width: 1200px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -293,32 +293,12 @@ Start of About
 	text-align: center;
 }
 
-.about-content h2 {
-	font-size: 2.5rem;
-	background: -webkit-linear-gradient(
-		to right,
-		var(--color4),
-		var(--color5),
-		var(--color6)
-	);
-	background: linear-gradient(
-		to right,
-		var(--color4),
-		var(--color5),
-		var(--color6)
-	);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	transition: all 0.5s ease;
-	margin: 2rem 0;
-}
 
 .about-content p {
-	margin: 2rem 3rem 2rem 3rem;
-	font-size: 2rem;
+	padding: 2rem 3rem 2rem 3rem;
+	font-size: 1.5rem;
 	text-align: center;
+	max-width: 800px;
 }
 
 .about-btn {
