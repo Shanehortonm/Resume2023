@@ -650,6 +650,9 @@ Start of Email
 }
 
 .form-popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	display: none;
 }
 
@@ -658,13 +661,72 @@ Start of Email
 	padding: 20px;
 	border: 1px solid white;
 	border-radius: 10px;
+	background-image: linear-gradient(
+		to right,
+		var(--color4),
+		var(--color4),
+		var(--color5)
+	);
+}
+
+#form h2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1.5rem;
+	background-image: linear-gradient(
+		to right,
+		var(--color1),
+		var(--color2),
+		var(--color1)
+	);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	border-bottom: 1px solid var(--color2);
+}
+
+#form p {
+	text-align: center;
+	font-size: 1.2rem;
+	background-image: linear-gradient(
+		to right,
+		var(--color1),
+		var(--color2),
+		var(--color1)
+	);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 10px 0 20px 0;
 }
 
 .field {
 	padding: 10px 0 10px 0;
-	width: 3;
 }
 
+.field:nth-child(6) {
+	margin-bottom: 30px;
+}
+
+.field input {
+	font-size: 1.1rem;
+	width: 80%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 3px 5px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 14px 16px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#emailBtn {
+}
+
+.btn-cancel {
+}
 /*
 =====================================================================================
 Start of Footer
