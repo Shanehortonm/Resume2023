@@ -589,6 +589,7 @@ Start of Email
 =====================================================================================
 */
 .email {
+	color: white;
 	background: linear-gradient(
 		to bottom,
 		var(--color1),
@@ -622,7 +623,6 @@ Start of Email
 }
 
 .email-content {
-	color: whitesmoke;
 	width: 100%;
 	max-width: 1200px;
 	display: flex;
@@ -647,6 +647,12 @@ Start of Email
 	color: var(--color7);
 }
 
+.fa-solid,
+.fa-envelope {
+	font-size: 10rem;
+	transition: all 0.5s ease;
+}
+
 .fa-envelope:hover {
 	cursor: pointer;
 }
@@ -661,6 +667,7 @@ Start of Email
 #form {
 	min-width: 200px;
 	padding: 20px;
+	margin: 20px;
 	border: 1px solid white;
 	border-radius: 10px;
 	background-image: linear-gradient(
@@ -1023,6 +1030,13 @@ Media Queries
 	.resume-grid {
 		grid-template-columns: 1fr 1fr;
 	}
+
+	.fa-solid,
+	.fa-envelope {
+		margin-right: 20px;
+		font-size: 12rem;
+		transition: all 0.5s ease;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -1074,6 +1088,12 @@ Media Queries
 		display: flex;
 		flex-direction: row;
 	}
+
+	.fa-solid,
+	.fa-envelope {
+		font-size: 16rem;
+		transition: all 0.5s ease;
+	}
 }
 
 @media screen and (min-width: 1300px) {
@@ -1084,5 +1104,11 @@ Media Queries
 
 	.hero-img img {
 		width: 300px;
+	}
+
+	.fa-solid,
+	.fa-envelope {
+		font-size: 18rem;
+		transition: all 0.5s ease;
 	}
 }
