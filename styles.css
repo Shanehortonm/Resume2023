@@ -31,7 +31,7 @@ Start of Nav
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 0.8rem;
+	font-size: 1.1rem;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -657,7 +657,7 @@ Start of Email
 }
 
 #form {
-	min-width: 300px;
+	min-width: 200px;
 	padding: 20px;
 	border: 1px solid white;
 	border-radius: 10px;
@@ -720,6 +720,17 @@ Start of Email
 	padding: 3px 5px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 14px 16px,
 		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.field textarea {
+	font-size: 1.1rem;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 14px 16px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+::-webkit-input-placeholder {
+	text-align: center;
 }
 
 #emailBtn {
