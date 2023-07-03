@@ -175,13 +175,15 @@ Start of Hero
 	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 	text-align: center;
 	transition: all 0.5s ease;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
 }
 
 .hero-img img {
 	margin-top: 30px;
-	width: 150px;
+	width: 180px;
 	border-radius: 40px;
-	perspective: 1000px;
+	box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.75);
 }
 
 .hero-img {
@@ -189,13 +191,18 @@ Start of Hero
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	background-size: cover;
-	transition: all 0.5s ease-in-out;
+}
+
+.hero-box .hero-img:hover {
+	width: 330px;
+	height: 400px;
+	transform: translateZ(30px);
 }
 
 
 .hero-content {
 	grid-area: content;
-	margin: 25px;
+	padding: 60px 10px;
 }
 
 .hero-heading {
