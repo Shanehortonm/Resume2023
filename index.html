@@ -48,11 +48,11 @@
 					data-tilt
 					data-tilt-full-page-listening="true"
 					data-tilt-scale=".9"
-					data-tilt-max="60"
+					data-tilt-max="40"
 					data-tilt-reverse="true"
 					data-tilt-speed="400"
 					data-tilt-transition="true"
-					data-tilt-perspective="1000"
+					data-tilt-perspective="600"
 					data-tilt-axis="null"
 					data-tilt-gyroscope="true"
 					data-tilt-reset="true"
@@ -219,20 +219,30 @@
 							<h2>Contact Me</h2>
 							<p>Drop me a quick message and I will get in touch!</p>
 							<div class="field">
-								<input type="text" placeholder="Name" id="name" />
+								<input type="text" name="name" placeholder="Name" id="name" />
 							</div>
 							<div class="field">
-								<input type="text" placeholder="Email" id="email" />
+								<input
+									type="text"
+									name="email"
+									placeholder="Email"
+									id="email"
+								/>
 							</div>
 							<div class="field">
-								<input type="text" placeholder="Number" id="number" />
+								<input
+									type="text"
+									name="number"
+									placeholder="Number"
+									id="number"
+								/>
 							</div>
 							<div class="field">
 								<textarea
 									name="message"
 									id="message"
 									placeholder="Message"
-									cols="15"
+									cols="20"
 									rows="10"
 								></textarea>
 							</div>
@@ -242,7 +252,6 @@
 									class="email-btn"
 									id="emailBtn"
 									value="Send Email"
-									onclick="sendMail()"
 								/>
 								<button type="button" class="cancel-btn" onclick="closeForm()">
 									Close

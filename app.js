@@ -40,12 +40,13 @@ Email PopUp
 
 function openForm() {
   document.getElementById("myForm").style.display = "flex";
-  document.getElementById("card-2").style.display = "none"
+  document.getElementById("card-2").style.display = "none";
 }
   
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
-  document.getElementById("card-2").style.display = "contents"
+  document.getElementById("card-2").style.display = "contents";
+  document.getElementById("form").reset();
 }
 
 /*
@@ -53,28 +54,32 @@ function closeForm() {
 Email link to Email.js
 ==================================================
 */
-function sendMail(){
-let params = {
-  name: document.getElementById("name").value,
-  email: document.getElementById("email;").value,
-  number: document.getElementById("number").value,
-  message: document.getElementById("message").value
-  };
 
-  const serviceID = "service_isvaefu";
-const templateID = "template_bbytm0z";
+const btn = document.getElementById('emailBtn');
 
-emailjs.send(serviceID,templateID,params)
-.then (
-  res => {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("number").value = "";
-    document.getElementById("message").value = "";
-    console.log(res);
-    alert("Your message sent Successfully")
-  }
-)
-.catch((err) => console.log(err));
+document.getElementById('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  btn.value = 'Sending...';
+
+  const serviceID = 'service_isvaefu';
+  const templateID = 'template_bbytm0z';
+
+  emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+      clearForm(); // Call the clearForm function after successful submission
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+
+function clearForm() {
+  // Get a reference to the form element
+  let form = document.getElementById("form");
+
+  // Reset the form
+  form.reset();
 }
-
