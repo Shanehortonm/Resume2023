@@ -669,7 +669,7 @@ Start of Email
 
 #form {
 	width: 330px;
-	margin: 0 15px;
+	margin: 0 10px;
 	border: 1px solid white;
 	border-radius: 10px;
 	background-image: linear-gradient(
@@ -1068,7 +1068,7 @@ Media Queries
 
 	.portfolio-card {
 		height: 450px;
-		width: 320px;
+		width: 300px;
 		background-image: linear-gradient(
 			to right,
 			var(--color3) 0%,
