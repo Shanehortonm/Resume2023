@@ -28,7 +28,6 @@ const hideMobileMenu = () => {
   };
   
   menuLinks.addEventListener('click', hideMobileMenu);
-  navLogo.addEventListener('click', hideMobileMenu);
 
 
 
@@ -54,24 +53,28 @@ function closeForm() {
 Email link to Email.js
 ==================================================
 */
+function sendMail(){
+let params = {
+  name: document.getElementById("name").value,
+  email: document.getElementById("email;").value,
+  number: document.getElementById("number").value,
+  message: document.getElementById("message").value
+  };
 
-const btn = document.getElementById('emailBtn');
+  const serviceID = "service_isvaefu";
+const templateID = "template_bbytm0z";
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+emailjs.send(serviceID,templateID,params)
+.then (
+  res => {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("number").value = "";
+    document.getElementById("message").value = "";
+    console.log(res);
+    alert("Your message sent Successfully")
+  }
+)
+.catch((err) => console.log(err));
+}
 
-   btn.value = 'Sending...';
-
-   const serviceID = 'default_service';
-   const templateID = 'template_bbytm0z';
-
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
