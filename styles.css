@@ -166,7 +166,7 @@ Start of Hero
 
 .hero-box {
 	display: grid;
-	grid-template-columns: 350px;
+	grid-template-columns: 300px;
 	grid-template-rows: 220px 220px;
 	grid-template-areas: "image" "content";
 	border: 0.5px solid var(--color3);
