@@ -195,7 +195,7 @@ Start of Hero
 	transition: all 0.5s ease-in-out;
 }
 
-.hero-box .hero-img:hover {
+.hero-img:hover {
 	transform: translateZ(100px) scale(1.1);
 	transition: all 0.5s ease-in-out;
 }
@@ -1002,6 +1002,10 @@ Media Queries
 
 	.about-content {
 		flex-direction: row;
+	}
+
+	.fa-solid .fa-cubes-stacked {
+		font-size: 12rem;
 	}
 
 	/* Start of Portfolio */

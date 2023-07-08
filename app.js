@@ -8,16 +8,12 @@ Hamburger Menu
 const menu = document.querySelector('#mobile-nav');
 const menuLinks = document.querySelector('.navbar-menu');
 
-
-
-
 const hamburgerMenu = () => {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
 };
 
 menu.addEventListener('click', hamburgerMenu);
-
 
 const hideMobileMenu = () => {
     const menuBars = document.querySelector('.is-active');
@@ -29,14 +25,11 @@ const hideMobileMenu = () => {
   
   menuLinks.addEventListener('click', hideMobileMenu);
 
-
-
 /*
 ==================================================
 Email PopUp
 ==================================================
 */
-
 
 function openForm() {
   document.getElementById("myForm").style.display = "flex";
